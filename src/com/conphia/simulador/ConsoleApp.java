@@ -16,8 +16,14 @@ public class ConsoleApp {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            System.out.println(
-                    "\n1) Iniciar gerador de logs\n2) Parar gerador\n3) Rodar scanner/classificador\n4) Ver alerts.log\n5) Responder a um IP (bloquear simulado)\n6) Preservar evidências e gerar relatório\n7) Sair");
+            System.out.println("1) Iniciar gerador de logs\n"
+                     + "2) Parar gerador\n"
+                     + "3) Rodar scanner/classificador\n"
+                     + "4) Ver alerts.log\n"
+                     + "5) Responder a um IP (bloquear simulado)\n"
+                     + "6) Preservar evidências e gerar relatório\n"
+                     + "7) Ações resposta aos incidentes\n"
+                     + "8) Sair");
             System.out.print("> ");
             String opt = sc.nextLine().trim();
             switch (opt) {
@@ -60,6 +66,10 @@ public class ConsoleApp {
                     System.out.println("Relatório gerado em: " + rep.getAbsolutePath());
                     break;
                 case "7":
+                	AcoesResposta.mostrarAcoes();
+                	
+                	break;
+                case "8":
                     System.out.println("Saindo...");
                     gen.stop();
                     sc.close();

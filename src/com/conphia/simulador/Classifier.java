@@ -26,6 +26,7 @@ public class Classifier {
                     String label = match(line);
                     if (label != null)
                         appendAlert(label, f.getName(), line);
+                    	break;
                 }
             } catch (IOException e) {
                 e.printStackTrace();
